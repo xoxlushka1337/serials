@@ -1,0 +1,24 @@
+@import "../../scss/_variables.scss";
+
+.categories {
+	display: flex;
+	flex-direction: column;
+	row-gap: 1.3rem;
+	padding: 2.2rem 0 0 2.9rem;
+
+	&__li {
+		color: $title-color;
+		font-size: 2rem;
+		font-weight: 600;
+		text-transform: capitalize;
+
+		cursor: pointer;
+
+		&:hover {
+			color: #b7b7b7;
+			font-size: 2rem;
+			font-weight: 600;
+			text-decoration-line: underline;
+		}
+	}
+}

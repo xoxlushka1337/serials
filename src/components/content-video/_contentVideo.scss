@@ -1,0 +1,13 @@
+.content-video {
+	display: flex;
+	height: 100%;
+
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		padding-top: 8.2rem;
+	}
+	&__body {
+		margin-right: 8.6rem;
+	}
+}

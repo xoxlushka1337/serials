@@ -1,0 +1,14 @@
+$main-color: #dadada;
+$title-color: #fff;
+
+#basic-text {
+	font-size: 2.4rem;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 169.4%; /* 40.656px */
+}
+#button {
+	border-radius: 2.1rem;
+	background: $main-color;
+	padding: 1.7rem 4.7rem;
+}

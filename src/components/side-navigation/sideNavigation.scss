@@ -1,0 +1,32 @@
+@import "../../scss/_variables.scss";
+
+.side-navigation {
+	width: 34.4rem;
+	height: 100%;
+	color: $main-color;
+	border-left: #cfcfcf 1px solid;
+	&__contacts {
+		padding: 8.2rem 0 2.9rem 2.6rem;
+	}
+
+	&__text {
+		font-size: 2rem;
+		font-weight: 900;
+		letter-spacing: 0.2rem;
+		margin-bottom: 2.3rem;
+	}
+
+	&__network {
+		display: flex;
+		column-gap: 2.6rem;
+	}
+
+	&__title {
+		color: $title-color;
+		font-size: 2.4rem;
+		font-weight: 900;
+		padding: 2.8rem 0 2.9rem 2.8rem;
+		border-top: #cfcfcf 1px solid;
+		border-bottom: #cfcfcf 1px solid;
+	}
+}
