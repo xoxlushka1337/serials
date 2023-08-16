@@ -1,8 +1,15 @@
+import { useState } from "react";
 import Categories from "../categories/Categories";
 import "./sideNavigation.scss";
 
-const SideNavigation = ({ categoriesFilter, movie }) => {
+const SideNavigation = ({ categories, onCategorySelect }) => {
 	// console.log(categoriesFilter());
+	const [selectedCategory, setSelectedCategory] = useState(null);
+
+	const handleCategorySelect = category => {
+		setSelectedCategory(category);
+		onCategorySelect(category);
+	};
 	return (
 		<div className="side-navigation">
 			<div className="side-navigation__contacts">
@@ -26,7 +33,10 @@ const SideNavigation = ({ categoriesFilter, movie }) => {
 				</div>
 			</div>
 			<h3 className="side-navigation__title">Genre</h3>
-			<Categories categoriesFilter={categoriesFilter} movie={movie} />
+			<Categories
+				categories={categories}
+				onCategorySelect={handleCategorySelect}
+			/>
 		</div>
 	);
 };

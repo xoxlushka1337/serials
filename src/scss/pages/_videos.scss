@@ -8,3 +8,19 @@
 		height: 100%;
 	}
 }
+.content-video {
+	display: flex;
+	justify-content: space-between;
+
+	height: 100%;
+
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		padding-top: 8.2rem;
+	}
+	&__body {
+		margin-right: 8.6rem;
+		width: 100%;
+	}
+}
