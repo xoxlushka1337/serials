@@ -22,6 +22,7 @@ function Videos({ movie }) {
 	];
 
 	const [selectedCategories, setSelectedCategories] = useState([]);
+	const [searchValue, setSearchValue] = useState("");
 
 	const handleCategorySelect = category => {
 		setSelectedCategories([category]); // Заменяем текущий массив на новую выбранную категорию
@@ -34,9 +35,16 @@ function Videos({ movie }) {
 					<div className="content-video__body">
 						<div className="content-video__header">
 							<Menu />
-							<Search />
+							<Search
+								searchValue={searchValue}
+								setSearchValue={setSearchValue}
+							/>
 						</div>
-						<Movies movie={movie} selectedCategories={selectedCategories} />
+						<Movies
+							searchValue={searchValue}
+							movie={movie}
+							selectedCategories={selectedCategories}
+						/>
 					</div>
 					<SideNavigation
 						categories={categories}

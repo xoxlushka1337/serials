@@ -2,7 +2,7 @@ import Banner from "../banner/Banner";
 
 import "./_movies.scss";
 
-function Movies({ movie, selectedCategories }) {
+function Movies({ movie, selectedCategories, searchValue }) {
 	const filteredMovies =
 		selectedCategories.length === 0
 			? movie
@@ -14,11 +14,18 @@ function Movies({ movie, selectedCategories }) {
 		<div className="movies">
 			<div className="container">
 				<div className="movies__content">
-					{filteredMovies.map(el => (
-						<div key={el.id}>
-							<Banner title={el.title} season={el.season} img={el.img} />
-						</div>
-					))}
+					{filteredMovies
+						.filter(obj => {
+							if (obj.title.toLowerCase().includes(searchValue.toLowerCase())) {
+								return true;
+							}
+							return false;
+						})
+						.map(el => (
+							<div key={el.id}>
+								<Banner title={el.title} season={el.season} img={el.img} />
+							</div>
+						))}
 				</div>
 			</div>
 		</div>
