@@ -5,6 +5,7 @@ import Search from "../components/search/Search";
 import SideNavigation from "../components/side-navigation/SideNavigation";
 
 import "../scss/pages/_videos.scss";
+import DecorativeScroll from "../components/decorative-scroll/DecorativeScroll";
 
 function Videos({ movie }) {
 	const categories = [
@@ -32,6 +33,7 @@ function Videos({ movie }) {
 		<div className="videos">
 			<div className="videos__content">
 				<div className="content-video">
+					<DecorativeScroll />
 					<div className="content-video__body">
 						<div className="content-video__header">
 							<Menu />

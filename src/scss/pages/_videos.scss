@@ -3,6 +3,7 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 100%;
+	padding-left: 7.7rem;
 
 	&__content {
 		height: 100%;
@@ -19,8 +20,9 @@
 		justify-content: space-between;
 		padding-top: 8.2rem;
 	}
+
 	&__body {
-		margin-right: 8.6rem;
+		margin: 0 8.6rem 0 9.5rem;
 		width: 100%;
 	}
 }
