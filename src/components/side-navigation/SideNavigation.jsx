@@ -2,12 +2,12 @@ import { useState } from "react";
 import Categories from "../categories/Categories";
 import "./sideNavigation.scss";
 
-const SideNavigation = ({ categories, onCategorySelect }) => {
-	// console.log(categoriesFilter());
+const SideNavigation = ({ onCategorySelect }) => {
 	const [selectedCategory, setSelectedCategory] = useState(null);
 
 	const handleCategorySelect = category => {
 		setSelectedCategory(category);
+
 		onCategorySelect(category);
 	};
 	return (
@@ -33,10 +33,7 @@ const SideNavigation = ({ categories, onCategorySelect }) => {
 				</div>
 			</div>
 			<h3 className="side-navigation__title">Genre</h3>
-			<Categories
-				categories={categories}
-				onCategorySelect={handleCategorySelect}
-			/>
+			<Categories onCategorySelect={handleCategorySelect} />
 		</div>
 	);
 };

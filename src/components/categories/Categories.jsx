@@ -1,6 +1,8 @@
+import { useSelector } from "react-redux";
 import "./_categories.scss";
 
-const Categories = ({ categories, onCategorySelect }) => {
+const Categories = ({ onCategorySelect }) => {
+	const categories = useSelector(state => state.filters.categories);
 	return (
 		<ul className="categories">
 			{categories.map(category => (

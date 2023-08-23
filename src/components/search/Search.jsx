@@ -1,11 +1,15 @@
+import { useDispatch, useSelector } from "react-redux";
 import "./_search.scss";
+import { setSearchValue } from "../../redux/slices/filterSlice";
 
-const Search = ({ searchValue, setSearchValue }) => {
+const Search = () => {
+	const searchValue = useSelector(state => state.filters.searchValue);
+	const dispatch = useDispatch();
 	return (
 		<div className="search">
 			<input
 				value={searchValue}
-				onChange={event => setSearchValue(event.target.value)}
+				onChange={event => dispatch(setSearchValue(event.target.value))}
 				className="search__input"
 				type="text"
 			/>

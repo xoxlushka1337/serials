@@ -1,4 +1,6 @@
-import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { setSelectedCategories } from "../redux/slices/filterSlice";
+
 import Menu from "../components/menu/Menu";
 import Movies from "../components/movies/Movies";
 import Search from "../components/search/Search";
@@ -7,26 +9,11 @@ import SideNavigation from "../components/side-navigation/SideNavigation";
 import "../scss/pages/_videos.scss";
 import DecorativeScroll from "../components/decorative-scroll/DecorativeScroll";
 
-function Videos({ movie }) {
-	const categories = [
-		"all",
-		"fantastic",
-		"comedy",
-		"melodrama",
-		"action movie",
-		"romance",
-		"romantic comedy",
-		"detective",
-		"horror",
-		"cartoon",
-		"science fiction",
-	];
-
-	const [selectedCategories, setSelectedCategories] = useState([]);
-	const [searchValue, setSearchValue] = useState("");
+function Videos() {
+	const dispatch = useDispatch();
 
 	const handleCategorySelect = category => {
-		setSelectedCategories([category]); // Заменяем текущий массив на новую выбранную категорию
+		dispatch(setSelectedCategories([category]));
 	};
 
 	return (
@@ -37,21 +24,11 @@ function Videos({ movie }) {
 					<div className="content-video__body">
 						<div className="content-video__header">
 							<Menu />
-							<Search
-								searchValue={searchValue}
-								setSearchValue={setSearchValue}
-							/>
+							<Search />
 						</div>
-						<Movies
-							searchValue={searchValue}
-							movie={movie}
-							selectedCategories={selectedCategories}
-						/>
+						<Movies />
 					</div>
-					<SideNavigation
-						categories={categories}
-						onCategorySelect={handleCategorySelect}
-					/>
+					<SideNavigation onCategorySelect={handleCategorySelect} />
 				</div>
 			</div>
 		</div>

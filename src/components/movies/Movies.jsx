@@ -1,13 +1,18 @@
+import { useSelector } from "react-redux";
 import Banner from "../banner/Banner";
 
 import "./_movies.scss";
 
-function Movies({ movie, selectedCategories, searchValue }) {
+function Movies() {
+	const categories = useSelector(state => state.filters.category);
+	const searchValue = useSelector(state => state.filters.searchValue);
+	const movie = useSelector(state => state.movies.movies);
+
 	const filteredMovies =
-		selectedCategories.length === 0
+		categories.length === 0
 			? movie
 			: movie.filter(movie =>
-					movie.category.some(category => selectedCategories.includes(category))
+					movie.category.some(category => categories.includes(category))
 			  );
 
 	return (
