@@ -13,6 +13,7 @@ const initialState = {
 			trailer: "",
 			premiere: "15 July's 2016",
 			director: "Matt Differentiation",
+			background: "bacg-strange_things.png",
 		},
 		{
 			id: 1,
@@ -24,10 +25,11 @@ const initialState = {
 			trailer: "",
 			premiere: "17 July's 2011",
 			director: "Owen Harris, Carl Tibbetts, James Hawes",
+			background: "bacg-black-mirror.png",
 		},
 		{
 			id: 2,
-			title: "Love. Death. Robots",
+			title: "Love. Death. Robots.",
 			season: "1 2 3 4",
 			img: "Love.Death.Robots.png",
 			category: ["all", "fantastic", "comedy", "cartoon"],
@@ -36,6 +38,7 @@ const initialState = {
 			trailer: "",
 			premiere: "15 March 2019",
 			director: "Jerome Denjean",
+			background: "bacg-love-death.png",
 		},
 		{
 			id: 3,
@@ -48,6 +51,7 @@ const initialState = {
 			trailer: "",
 			premiere: "14 June's 2012",
 			director: "Joe Pitt, John Aoshima",
+			background: "bacg-gravity-falls.png",
 		},
 		{
 			id: 4,
@@ -59,10 +63,11 @@ const initialState = {
 			trailer: "",
 			premiere: "22 October 2021",
 			director: "Vitaly Strokous, David Fox",
+			background: "bacg-inside-job.png",
 		},
 		{
 			id: 5,
-			title: "Mocn Knight",
+			title: "Moon Knight",
 			season: "1",
 			img: "Mocn-Knight.png",
 			category: ["all", "fantastic", "action movie"],
@@ -70,6 +75,7 @@ const initialState = {
 			trailer: "",
 			premiere: "30 March 2022",
 			director: "Mohamed Diab",
+			background: "bacg-moon-knight.png",
 		},
 		{
 			id: 6,
@@ -82,6 +88,20 @@ const initialState = {
 			trailer: "",
 			premiere: "31 October 2022",
 			director: "Tim Burton, James Marshall",
+			background: "bacg-rick-and-morty.png",
+		},
+		{
+			id: 7,
+			title: "Rick and Morty",
+			season: "1",
+			img: "Rick-Morty.png",
+			category: ["all", "fantastic", "detective"],
+			description:
+				"The series is a supernatural detective comedy about growing up, dedicated to Wednesday Addams and her years when she was in high school at Nevermore Academy, where she tries to master her psychic abilities, stop a monstrous series of murders of citizens and solve a supernatural mystery that affected her family 25 years ago, and all this during her new relationship.",
+			trailer: "",
+			premiere: "31 October 2022",
+			director: "Tim Burton, James Marshall",
+			background: "image-11.png",
 		},
 	],
 };
@@ -89,16 +109,7 @@ const initialState = {
 const movieSlice = createSlice({
 	name: "movies",
 	initialState,
-	reducers: {
-		// setSelectedCategories(state, action) {
-		// 	state.category = action.payload;
-		// },
-		// setSearchValue(state, action) {
-		// 	state.searchValue = action.payload;
-		// },
-	},
+	reducers: {},
 });
-
-// export const { setSelectedCategories, setSearchValue } = filterSlice.actions;
 
 export default movieSlice.reducer;

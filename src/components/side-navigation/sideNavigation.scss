@@ -4,7 +4,7 @@
 	width: 34.4rem;
 	height: 100%;
 	color: $main-color;
-	border-left: #cfcfcf 1px solid;
+	border-left: $side-navigation-color 1px solid;
 	&__contacts {
 		display: flex;
 		flex-direction: column;
@@ -24,12 +24,22 @@
 		column-gap: 2.6rem;
 	}
 
+	&__icon {
+		width: 29px;
+		cursor: pointer;
+		transition: all 0.5s;
+	}
+	&__icon:hover {
+		width: 35px;
+		transition: all 0.5s;
+	}
+
 	&__title {
 		color: $title-color;
 		font-size: 2.4rem;
 		font-weight: 900;
 		padding: 2.8rem 0 2.9rem 2.8rem;
-		border-top: #cfcfcf 1px solid;
-		border-bottom: #cfcfcf 1px solid;
+		border-top: $side-navigation-color 1px solid;
+		border-bottom: $side-navigation-color 1px solid;
 	}
 }

@@ -18,19 +18,15 @@ function Videos() {
 
 	return (
 		<div className="videos">
-			<div className="videos__content">
-				<div className="content-video">
-					<DecorativeScroll />
-					<div className="content-video__body">
-						<div className="content-video__header">
-							<Menu />
-							<Search />
-						</div>
-						<Movies />
-					</div>
-					<SideNavigation onCategorySelect={handleCategorySelect} />
+			<DecorativeScroll />
+			<div className="videos__body">
+				<div className="videos__header">
+					<Menu />
+					<Search />
 				</div>
+				<Movies />
 			</div>
+			<SideNavigation onCategorySelect={handleCategorySelect} />
 		</div>
 	);
 }

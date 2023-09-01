@@ -1,0 +1,54 @@
+@import "../../scss/_variables.scss";
+
+.content {
+	transition: background-image 0.5s ease-in-out;
+	&__title {
+		color: #fff;
+		font-size: 6.4rem;
+		font-weight: 800;
+		line-height: normal;
+		text-transform: capitalize;
+
+		position: relative;
+		z-index: 2;
+	}
+
+	&__description {
+		color: $text;
+		font-size: 24px;
+		font-style: normal;
+		font-weight: 600;
+		line-height: 169.4%;
+
+		margin: 5.4rem 0 15.5rem;
+
+		position: relative;
+		z-index: 2;
+	}
+
+	&__number {
+		color: #9f9f9f;
+		font-size: 24px;
+		font-weight: 900;
+		letter-spacing: 2.16px;
+
+		position: relative;
+		z-index: 2;
+	}
+
+	&__bg {
+		width: 100vw;
+		height: 100vw;
+		overflow: hidden;
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 0;
+	}
+
+	&__bg img {
+		width: 100%;
+		filter: brightness(40%);
+		mix-blend-mode: multiply;
+	}
+}

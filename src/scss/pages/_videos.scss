@@ -1,23 +1,16 @@
 .videos {
-	background-image: url("../../img/background-video.png");
-	background-repeat: no-repeat;
-	background-size: cover;
-	height: 100%;
-	padding-left: 7.7rem;
-
-	&__content {
-		height: 100%;
-	}
-}
-.content-video {
 	display: flex;
 	justify-content: space-between;
 
+	background-image: url("../../img/background-video.png");
+	background-repeat: no-repeat;
+	background-size: cover;
 	height: 100%;
 
 	&__header {
 		display: flex;
 		justify-content: space-between;
+		align-items: center;
 		padding-top: 8.2rem;
 	}
 

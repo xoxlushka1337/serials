@@ -4,7 +4,10 @@
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
-	// row-gap: 5px;
+	padding-left: 7.7rem;
+
+	position: relative;
+	z-index: 2;
 
 	&__line1 {
 		width: 1px;

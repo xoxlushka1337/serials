@@ -16,9 +16,12 @@
 
 		&:hover {
 			color: #b7b7b7;
-			font-size: 2rem;
-			font-weight: 600;
 			text-decoration-line: underline;
 		}
 	}
+}
+
+.active {
+	color: #ffb800;
+	text-decoration-line: underline;
 }
