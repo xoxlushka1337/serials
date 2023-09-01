@@ -2,6 +2,8 @@ import { useSelector } from "react-redux";
 
 import "./_content.scss";
 
+import { ReactComponent as Arrow } from "../../img/icon/arrow.svg";
+
 const Content = ({ prevMovie, nextMovie, movieIndex }) => {
 	const movie = useSelector(state => state.movies.movies);
 
@@ -12,8 +14,12 @@ const Content = ({ prevMovie, nextMovie, movieIndex }) => {
 			<div className="content__wrapper">
 				<div className="content__number">01</div>
 			</div>
-			<button onClick={() => prevMovie()}>Назад</button>
-			<button onClick={() => nextMovie()}>Вперед</button>
+			<button className={"content__button"} onClick={() => prevMovie()}>
+				<Arrow className="content__arrow" />
+			</button>
+			<button className="content__button" onClick={() => nextMovie()}>
+				<Arrow className="content__arrow content__arrow_turn" />
+			</button>
 		</div>
 	);
 };

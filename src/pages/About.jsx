@@ -10,7 +10,8 @@ const About = () => {
 	const movie = useSelector(state => state.movies.movies);
 	const [movieIndex, setMovieIndex] = useState(0);
 
-	const [loading, setLoading] = useState(true);
+	// const [loading, setLoading] = useState(true);
+
 	const [loadedImages, setLoadedImages] = useState([]);
 
 	useEffect(() => {
@@ -28,13 +29,11 @@ const About = () => {
 
 				images.push(img);
 			}
-
 			return images;
 		};
 		preloadImages()
 			.then(images => {
 				setLoadedImages(images);
-				setLoading(false);
 			})
 			.catch(error => {
 				console.error("Ошибка предзагрузки изображений:", error);
@@ -42,18 +41,22 @@ const About = () => {
 	}, [movie]);
 
 	const nextMovie = () => {
-		if (movieIndex < movie.length - 1) {
+		if (movieIndex === movie.length - 1) {
+			setMovieIndex(0);
+		} else {
 			setMovieIndex(movieIndex + 1);
 		}
 	};
 
 	const prevMovie = () => {
-		if (movieIndex > 0) {
+		if (movieIndex === 0) {
+			setMovieIndex(movie.length - 1);
+		} else {
 			setMovieIndex(movieIndex - 1);
 		}
 	};
+	console.log(movieIndex);
 
-	console.log(loadedImages[movieIndex]);
 	return (
 		<div className="about">
 			<div
