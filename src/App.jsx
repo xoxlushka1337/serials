@@ -9,7 +9,7 @@ function App() {
 		<div className="wrapper">
 			<Router>
 				<Routes>
-					<Route exact path="/ABOUT" element={<About />} />
+					<Route exact path="/" element={<About />} />
 					<Route exact path="/VIDEOS" element={<Videos />} />
 				</Routes>
 			</Router>

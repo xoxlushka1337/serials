@@ -10,17 +10,27 @@
 
 	&__list {
 		&-link {
+			display: inline-block;
 			font-size: 2rem;
 			color: $main-color;
 			text-decoration: none;
 			line-height: 3px;
+			transition: all 0.3s;
+
+			&:hover {
+				transform: scale(1.1);
+				text-decoration: underline;
+				transition: all 0.4s;
+			}
+
 			&_active {
 				color: $main-color;
 				text-decoration: underline;
-			}
+				cursor: default;
 
-			&:hover {
-				text-decoration: underline;
+				&:hover {
+					transform: none;
+				}
 			}
 		}
 	}

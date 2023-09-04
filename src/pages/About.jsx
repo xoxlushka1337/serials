@@ -5,13 +5,12 @@ import Content from "../components/content/Content";
 
 import "../scss/pages/_about.scss";
 import DecorativeScroll from "../components/decorative-scroll/DecorativeScroll";
+import InformationFilms from "../components/information-films/InformationFilms";
 
 const About = () => {
 	const movie = useSelector(state => state.movies.movies);
+
 	const [movieIndex, setMovieIndex] = useState(0);
-
-	// const [loading, setLoading] = useState(true);
-
 	const [loadedImages, setLoadedImages] = useState([]);
 
 	useEffect(() => {
@@ -81,6 +80,7 @@ const About = () => {
 						prevMovie={prevMovie}
 					/>
 				</div>
+				<InformationFilms movieIndex={movieIndex} />
 			</div>
 		</div>
 	);

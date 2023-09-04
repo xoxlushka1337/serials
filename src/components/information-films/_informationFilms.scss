@@ -1,0 +1,72 @@
+@import "../../scss/_variables.scss";
+
+.information-films {
+	width: 47.2rem;
+	height: 100%;
+	color: $main-color;
+	border-left: $side-navigation-color 1px solid;
+
+	z-index: 2;
+
+	&__contacts {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 2.9rem;
+	}
+
+	&__title {
+		font-size: 2rem;
+		font-weight: 900;
+		letter-spacing: 0.2rem;
+		margin-bottom: 2.3rem;
+		// margin-right: 5.2rem;
+	}
+
+	&__network {
+		display: flex;
+		column-gap: 2.6rem;
+	}
+
+	&__icon {
+		width: 29px;
+		cursor: pointer;
+		transition: all 0.5s;
+	}
+
+	&__icon:hover {
+		// width: 35px;
+		transform: scale(1.2);
+		transition: all 0.3s;
+	}
+
+	&__content {
+		border-top: $side-navigation-color 1px solid;
+		padding-top: 7.2rem;
+		display: flex;
+		flex-direction: column;
+		row-gap: 5.7rem;
+	}
+
+	&__container {
+		padding-left: 2.9rem;
+		color: $side-navigation-color;
+	}
+
+	&__subtitle {
+		font-size: 2.4rem;
+		font-weight: 900;
+		line-height: normal;
+		letter-spacing: 0.216rem;
+
+		margin-bottom: 1.1rem;
+	}
+
+	&__text {
+		font-size: 2rem;
+		font-weight: 700;
+		line-height: normal;
+		letter-spacing: 0.18rem;
+		text-transform: capitalize;
+	}
+}

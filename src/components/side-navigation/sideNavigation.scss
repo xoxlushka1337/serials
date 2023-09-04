@@ -5,6 +5,7 @@
 	height: 100%;
 	color: $main-color;
 	border-left: $side-navigation-color 1px solid;
+
 	&__contacts {
 		display: flex;
 		flex-direction: column;
@@ -29,6 +30,7 @@
 		cursor: pointer;
 		transition: all 0.5s;
 	}
+
 	&__icon:hover {
 		width: 35px;
 		transition: all 0.5s;

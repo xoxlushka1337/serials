@@ -13,6 +13,7 @@ const initialState = {
 			trailer: "",
 			premiere: "15 July's 2016",
 			director: "Matt Differentiation",
+			music: "Kyle Dixon & Michael Stein",
 			background: "bacg-strange_things.png",
 		},
 		{
@@ -25,6 +26,7 @@ const initialState = {
 			trailer: "",
 			premiere: "17 July's 2011",
 			director: "Owen Harris, Carl Tibbetts, James Hawes",
+			music: "Jon Opstad",
 			background: "bacg-black-mirror.png",
 		},
 		{
@@ -38,6 +40,7 @@ const initialState = {
 			trailer: "",
 			premiere: "15 March 2019",
 			director: "Jerome Denjean",
+			music: "Hans Zimmer",
 			background: "bacg-love-death.png",
 		},
 		{
@@ -51,6 +54,7 @@ const initialState = {
 			trailer: "",
 			premiere: "14 June's 2012",
 			director: "Joe Pitt, John Aoshima",
+			music: "Brad Brekk",
 			background: "bacg-gravity-falls.png",
 		},
 		{
@@ -63,6 +67,7 @@ const initialState = {
 			trailer: "",
 			premiere: "22 October 2021",
 			director: "Vitaly Strokous, David Fox",
+			music: "Michael Stein",
 			background: "bacg-inside-job.png",
 		},
 		{
@@ -75,6 +80,7 @@ const initialState = {
 			trailer: "",
 			premiere: "30 March 2022",
 			director: "Mohamed Diab",
+			music: "By Hesham Nazih",
 			background: "bacg-moon-knight.png",
 		},
 		{
@@ -88,20 +94,21 @@ const initialState = {
 			trailer: "",
 			premiere: "31 October 2022",
 			director: "Tim Burton, James Marshall",
+			music: "Rob Cairns",
 			background: "bacg-rick-and-morty.png",
 		},
 		{
 			id: 7,
-			title: "Rick and Morty",
+			title: "Chainsaw Man",
 			season: "1",
 			img: "Rick-Morty.png",
-			category: ["all", "fantastic", "detective"],
-			description:
-				"The series is a supernatural detective comedy about growing up, dedicated to Wednesday Addams and her years when she was in high school at Nevermore Academy, where she tries to master her psychic abilities, stop a monstrous series of murders of citizens and solve a supernatural mystery that affected her family 25 years ago, and all this during her new relationship.",
+			category: ["all", "fantastic", "Action Movie"],
+			description: `Aki and Power become the partners of the Chainsaw Man. Soon the hero falls in love with a mysterious girl named Reza, who turns out to be a female bomb sent after him. Besides her, Denji is being hunted by several other groups of killers.`,
 			trailer: "",
-			premiere: "31 October 2022",
-			director: "Tim Burton, James Marshall",
-			background: "image-11.png",
+			premiere: "11 October 2022",
+			director: "Ryu Nakayama",
+			music: "Kensuke Ushio",
+			background: "bacg-chainsaw_man.png",
 		},
 	],
 };
