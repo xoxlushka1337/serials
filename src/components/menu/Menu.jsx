@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 const Menu = () => {
 	const menu = ["ABOUT", "VIDEOS", "FEATURED", "GALLERY"];
+	const menuLink = ["", "videos", "featured", "gallery"];
 
 	const currentUrl = window.location.pathname;
 
@@ -25,9 +26,11 @@ const Menu = () => {
 						onClick={() => onClickMenu(`/${value}`)}
 						className="menu__list">
 						<Link
-							to={`/${value}`}
+							to={`/${menuLink[i]}`}
 							className={`menu__list-link ${
-								menuActiveIndex === `/${value}` ? "menu__list-link_active" : ""
+								menuActiveIndex === `/${menuLink[i]}`
+									? "menu__list-link_active"
+									: ""
 							}`}>
 							{value}
 						</Link>

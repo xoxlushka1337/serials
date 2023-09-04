@@ -6,7 +6,7 @@
 	transition: background-image 0.5s ease-in-out;
 
 	&__main {
-		min-height: calc(55vh - 80px);
+		min-height: calc(70vh - 80px);
 	}
 
 	&__title {
@@ -23,7 +23,7 @@
 		font-style: normal;
 		font-weight: 600;
 		line-height: 169.4%;
-		margin: 5.4rem 0 15.5rem;
+		margin-top: 5.4rem;
 	}
 
 	&__number {
