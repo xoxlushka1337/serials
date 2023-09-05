@@ -69,7 +69,7 @@ const About = () => {
 					backgroundRepeat: "no-repeat",
 					minHeight: "100vh",
 				}}>
-				<DecorativeScroll />
+				{/* <DecorativeScroll /> */}
 				<div className="about__body">
 					<div className="about__header">
 						<Menu />

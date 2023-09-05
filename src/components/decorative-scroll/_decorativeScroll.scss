@@ -1,12 +1,13 @@
 .decorative-scroll {
 	// height: 100%;
+	position: fixed;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
 	padding-left: 7.7rem;
 
-	position: relative;
+	// position: relative;
 	z-index: 2;
 
 	&__line1 {
@@ -24,7 +25,7 @@
 		height: 4px;
 		background: #cfcfcf;
 
-		margin: 0px 0 10px;
+		margin: 0px 0 15px;
 	}
 
 	&__lines::before {

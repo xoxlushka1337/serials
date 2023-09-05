@@ -18,7 +18,7 @@ function Videos() {
 
 	return (
 		<div className="videos">
-			<DecorativeScroll />
+			{/* <DecorativeScroll /> */}
 			<div className="videos__body">
 				<div className="videos__header">
 					<Menu />

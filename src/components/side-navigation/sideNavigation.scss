@@ -2,9 +2,13 @@
 
 .side-navigation {
 	width: 34.4rem;
-	// height: 100%;
 	color: $main-color;
 	border-left: $side-navigation-color 1px solid;
+	position: relative;
+
+	&__wrapper {
+		position: fixed;
+	}
 
 	&__contacts {
 		display: flex;
