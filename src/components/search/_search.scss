@@ -4,6 +4,13 @@
 	display: flex;
 	align-items: center;
 
+	&__icon {
+		stroke: #6a6a6a;
+		height: 3rem;
+		width: 3rem;
+		cursor: pointer;
+	}
+
 	&__input {
 		font-size: 1.4rem;
 		background-color: rgb(0, 0, 0, 0);
@@ -12,14 +19,13 @@
 		width: 194px;
 		color: $main-color;
 		outline: none;
-	}
 
-	&__icon {
-		background-image: url("../../img/icon/search.png");
-		background-repeat: no-repeat;
-		background-size: 2.4rem;
-		height: 3rem;
-		width: 3rem;
-		cursor: pointer;
+		&:focus {
+			border-bottom: #fff solid 1px;
+		}
+
+		&:focus ~ .search__icon {
+			stroke: #fff;
+		}
 	}
 }

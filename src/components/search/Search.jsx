@@ -1,10 +1,14 @@
 import { useDispatch, useSelector } from "react-redux";
 import "./_search.scss";
 import { setSearchValue } from "../../redux/slices/filterSlice";
+import { useState } from "react";
+
+import { ReactComponent as IconSearch } from "../../img/icon/search.svg";
 
 const Search = () => {
 	const searchValue = useSelector(state => state.filters.searchValue);
 	const dispatch = useDispatch();
+
 	return (
 		<div className="search">
 			<input
@@ -13,7 +17,7 @@ const Search = () => {
 				className="search__input"
 				type="text"
 			/>
-			<div className="search__icon"></div>
+			<IconSearch className="search__icon" />
 		</div>
 	);
 };
