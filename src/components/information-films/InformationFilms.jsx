@@ -1,5 +1,6 @@
 import { useSelector } from "react-redux";
 import "./_informationFilms.scss";
+import Video from "../video/Video";
 
 const InformationFilms = ({ movieIndex }) => {
 	const movie = useSelector(state => state.movies.movies);
@@ -49,6 +50,9 @@ const InformationFilms = ({ movieIndex }) => {
 				<div className="information-films__container">
 					<h3 className="information-films__subtitle">GENRE</h3>
 					<p className="information-films__text">{genre}</p>
+				</div>
+				<div className="information-films__container">
+					<Video />
 				</div>
 			</div>
 		</div>
