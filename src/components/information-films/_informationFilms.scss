@@ -2,7 +2,6 @@
 
 .information-films {
 	width: 47.2rem;
-	height: 100%;
 	color: $main-color;
 	border-left: $side-navigation-color 1px solid;
 
@@ -12,7 +11,7 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		padding: 2.9rem;
+		padding: 8.2rem 2.9rem 2.6rem;
 	}
 
 	&__title {
@@ -35,7 +34,6 @@
 	}
 
 	&__icon:hover {
-		// width: 35px;
 		transform: scale(1.2);
 		transition: all 0.3s;
 	}
@@ -49,7 +47,7 @@
 	}
 
 	&__container {
-		padding-left: 2.9rem;
+		padding: 0 2.9rem;
 		color: $side-navigation-color;
 	}
 
