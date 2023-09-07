@@ -2,11 +2,11 @@ import { useSelector } from "react-redux";
 import "./_informationFilms.scss";
 import Video from "../video/Video";
 
-const InformationFilms = ({ movieIndex }) => {
+const InformationFilms = () => {
 	const movie = useSelector(state => state.movies.movies);
+	const movieIndex = useSelector(state => state.movieIndex.movieIndex);
 
 	const genre = movie[movieIndex].category.join(", ");
-	// console.log(genre.join().split(","));
 
 	return (
 		<div className="information-films">
@@ -51,9 +51,7 @@ const InformationFilms = ({ movieIndex }) => {
 					<h3 className="information-films__subtitle">GENRE</h3>
 					<p className="information-films__text">{genre}</p>
 				</div>
-				<div className="information-films__container">
-					<Video />
-				</div>
+				<div className="information-films__container">{/* <Video /> */}</div>
 			</div>
 		</div>
 	);

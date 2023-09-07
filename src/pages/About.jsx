@@ -1,4 +1,4 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import Menu from "../components/menu/Menu";
 import { useEffect, useRef, useState } from "react";
 import Content from "../components/content/Content";
@@ -7,10 +7,14 @@ import "../scss/pages/_about.scss";
 import DecorativeScroll from "../components/decorative-scroll/DecorativeScroll";
 import InformationFilms from "../components/information-films/InformationFilms";
 
+import { setMovieIndex } from "../redux/slices/movieIndexSlice";
+
 const About = () => {
 	const movie = useSelector(state => state.movies.movies);
 
-	const [movieIndex, setMovieIndex] = useState(0);
+	const movieIndex = useSelector(state => state.movieIndex.movieIndex);
+	const dispatch = useDispatch();
+
 	const [loadedImages, setLoadedImages] = useState([]);
 
 	useEffect(() => {
@@ -41,20 +45,19 @@ const About = () => {
 
 	const nextMovie = () => {
 		if (movieIndex === movie.length - 1) {
-			setMovieIndex(0);
+			dispatch(setMovieIndex(0));
 		} else {
-			setMovieIndex(movieIndex + 1);
+			dispatch(setMovieIndex(movieIndex + 1));
 		}
 	};
 
 	const prevMovie = () => {
 		if (movieIndex === 0) {
-			setMovieIndex(movie.length - 1);
+			dispatch(setMovieIndex(movie.length - 1));
 		} else {
-			setMovieIndex(movieIndex - 1);
+			dispatch(setMovieIndex(movieIndex - 1));
 		}
 	};
-	console.log(movieIndex);
 
 	return (
 		<div className="about">
@@ -74,13 +77,9 @@ const About = () => {
 					<div className="about__header">
 						<Menu />
 					</div>
-					<Content
-						movieIndex={movieIndex}
-						nextMovie={nextMovie}
-						prevMovie={prevMovie}
-					/>
+					<Content nextMovie={nextMovie} prevMovie={prevMovie} />
 				</div>
-				<InformationFilms movieIndex={movieIndex} />
+				<InformationFilms />
 			</div>
 		</div>
 	);

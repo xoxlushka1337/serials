@@ -4,7 +4,9 @@ import "./_content.scss";
 
 import { ReactComponent as Arrow } from "../../img/icon/arrow.svg";
 
-const Content = ({ prevMovie, nextMovie, movieIndex }) => {
+const Content = ({ prevMovie, nextMovie }) => {
+	const movieIndex = useSelector(state => state.movieIndex.movieIndex);
+
 	const movie = useSelector(state => state.movies.movies);
 
 	let number = movie[movieIndex].id + 1;
