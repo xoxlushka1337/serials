@@ -37,8 +37,8 @@
 	}
 
 	&__icon:hover {
-		width: 35px;
-		transition: all 0.5s;
+		transform: scale(1.2);
+		transition: all 0.3s;
 	}
 
 	&__title {
