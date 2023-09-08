@@ -1,0 +1,45 @@
+.trailer {
+	transition: background-image 0.5s ease-in-out;
+	height: 27.7rem;
+	background-position: center;
+	border: 1px solid rgba(255, 255, 255, 0.48);
+	border-right: none;
+	border-left: none;
+	box-shadow: 0px 0.4rem 0.4rem 0px rgba(0, 0, 0, 0.25);
+
+	&__wrapper {
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		column-gap: 2.1rem;
+
+		cursor: pointer;
+		transition: all 0.5s;
+
+		&:hover {
+			box-shadow: 0px 0px 0px 1.3rem rgba(0, 0, 0, 0.5) inset;
+			transition: all 0.3s;
+		}
+	}
+
+	&__play {
+		height: 7.1rem;
+		filter: drop-shadow(0px 0.4rem 0.4rem rgba(0, 0, 0, 0.25));
+	}
+
+	&__text {
+		color: #e0e0e0;
+		text-shadow: 0px 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+
+		font-size: 2.4rem;
+
+		font-weight: 900;
+		letter-spacing: 0.216rem;
+	}
+
+	// &:hover ~ &__text {
+	// 	transform: scale(1.2);
+	// 	transition: all 0.3s;
+	// }
+}

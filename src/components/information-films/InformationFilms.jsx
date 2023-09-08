@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux";
 import "./_informationFilms.scss";
 import Video from "../video/Video";
+import TrailerImg from "../trailer-img/TraileImg";
 
 const InformationFilms = () => {
 	const movie = useSelector(state => state.movies.movies);
@@ -51,7 +52,7 @@ const InformationFilms = () => {
 					<h3 className="information-films__subtitle">GENRE</h3>
 					<p className="information-films__text">{genre}</p>
 				</div>
-				<div className="information-films__container">{/* <Video /> */}</div>
+				<TrailerImg />
 			</div>
 		</div>
 	);

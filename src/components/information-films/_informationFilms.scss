@@ -1,7 +1,10 @@
 @import "../../scss/_variables.scss";
 
 .information-films {
-	width: 47.2rem;
+	width: 67.2rem;
+	overflow-y: auto;
+	height: 100vh;
+
 	color: $main-color;
 	border-left: $side-navigation-color 1px solid;
 
