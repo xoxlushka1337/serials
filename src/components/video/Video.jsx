@@ -21,6 +21,8 @@ const Video = () => {
 				className={`video__content`}
 				url={movie[movieIndex].trailer}
 				controls={true}
+				width={"74rem"}
+				height={"46.8rem"}
 			/>
 		</div>
 	);
