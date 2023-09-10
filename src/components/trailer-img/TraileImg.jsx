@@ -1,15 +1,21 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 import "./_trailerImg.scss";
 
 import { ReactComponent as Play } from "../../img/icon/play.svg";
 
+import { setVideoActive } from "../../redux/slices/videoActiveSlice";
+
 const TrailerImg = () => {
 	const movie = useSelector(state => state.movies.movies);
 	const movieIndex = useSelector(state => state.movieIndex.movieIndex);
 
+	const videoActive = useSelector(state => state.videoActive.videoActive);
+	const dispatch = useDispatch();
+
 	return (
 		<div
+			onClick={() => dispatch(setVideoActive(true))}
 			className="trailer"
 			style={{
 				backgroundImage: `url(/imgs/trailer/${movie[movieIndex].imgTrailer})`,

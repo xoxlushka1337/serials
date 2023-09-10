@@ -8,6 +8,7 @@ import DecorativeScroll from "../components/decorative-scroll/DecorativeScroll";
 import InformationFilms from "../components/information-films/InformationFilms";
 
 import { setMovieIndex } from "../redux/slices/movieIndexSlice";
+import Video from "../components/video/Video";
 
 const About = () => {
 	const movie = useSelector(state => state.movies.movies);
@@ -59,6 +60,8 @@ const About = () => {
 		}
 	};
 
+	// const [videoActive, setVideoActive] = useState(true);
+
 	return (
 		<div className="about">
 			<div
@@ -80,6 +83,7 @@ const About = () => {
 					<Content nextMovie={nextMovie} prevMovie={prevMovie} />
 				</div>
 				<InformationFilms />
+				<Video />
 			</div>
 		</div>
 	);
