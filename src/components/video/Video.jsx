@@ -6,6 +6,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { setVideoActive } from "../../redux/slices/videoActiveSlice";
 
 const Video = () => {
+	const movie = useSelector(state => state.movies.movies);
+	const movieIndex = useSelector(state => state.movieIndex.movieIndex);
+
 	const videoActive = useSelector(state => state.videoActive.videoActive);
 	const dispatch = useDispatch();
 
@@ -16,7 +19,7 @@ const Video = () => {
 			<ReactPlayer
 				onClick={e => e.stopPropagation()}
 				className={`video__content`}
-				url="https://youtu.be/PX6KNzyQfZM?si=LVAieU5pcJtiME7A"
+				url={movie[movieIndex].trailer}
 				controls={true}
 			/>
 		</div>
