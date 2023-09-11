@@ -28,7 +28,12 @@ function Movies() {
 						})
 						.map(el => (
 							<div key={el.id}>
-								<Banner title={el.title} season={el.season} img={el.img} />
+								<Banner
+									title={el.title}
+									season={el.season}
+									img={el.img}
+									id={el.id}
+								/>
 							</div>
 						))}
 				</div>

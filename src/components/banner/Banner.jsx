@@ -1,9 +1,23 @@
 import "./_banner.scss";
 
-const Banner = ({ title, season, img }) => {
+import { setMovieIndex } from "../../redux/slices/movieIndexSlice";
+
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+
+const Banner = ({ title, season, img, id }) => {
+	const dispatch = useDispatch();
+
+	function transferMovieIndex(params) {
+		dispatch(setMovieIndex(id));
+	}
+
 	return (
 		<div className="banner">
-			<a className="banner__wrapper" href="#!">
+			<Link
+				to={`/`}
+				className="banner__wrapper"
+				onClick={() => transferMovieIndex()}>
 				<img className="banner__img" src={"./imgs/video/" + img} alt="404" />
 				<div className="banner__container">
 					<div className="banner__content">
@@ -11,7 +25,7 @@ const Banner = ({ title, season, img }) => {
 						<p className="banner__text">Season {season}</p>
 					</div>
 				</div>
-			</a>
+			</Link>
 		</div>
 	);
 };

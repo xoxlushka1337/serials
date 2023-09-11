@@ -81,7 +81,7 @@ const initialState = {
 			season: "1",
 			img: "Mocn-Knight.png",
 			category: ["all", "fantastic", "action movie"],
-			description: `Stephen Grant (Oscar Isaac) is a minor employee of the historical museum, suffering from periodic memory lapses and obvious self—doubt. Stephen is well versed in Egyptian mythology and quotes French poetry from memory, but when it comes to social skills, he has a hard time. After another fallout from reality, Stephen witnesses a meeting of the cult of the ancient goddess Amat, and also learns that all this time a second personality lived in his mind — the former mercenary Mark Spector (Oscar Isaac), it was he who from time to time "took" control of the body for himself.`,
+			description: `Stephen Grant (Oscar Isaac) is a minor employee of the historical museum, suffering from periodic memory lapses and obvious self—doubt. Stephen is well versed in Egyptian mythology and quotes French poetry from memory, but when it comes to social skills, he has a hard time.`,
 			imgTrailer: "imgTrailer-moon-knight.png",
 			trailer: "https://youtu.be/x7Krla_UxRg?si=O8S2IESVORzYtGP9",
 			premiere: "30 March 2022",
