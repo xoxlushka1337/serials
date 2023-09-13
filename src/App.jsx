@@ -11,12 +11,14 @@ import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 import About from "./pages/About";
 import Videos from "./pages/Videos";
+import Featured from "./pages/Featured";
 
 import "./scss/_common.scss";
 
 const routes = [
 	{ path: "/", Component: About },
-	{ path: "/VIDEOS", Component: Videos },
+	{ path: "/videos", Component: Videos },
+	{ path: "/featured", Component: Featured },
 ];
 
 function App() {

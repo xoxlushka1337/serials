@@ -7,7 +7,7 @@ import Search from "../components/search/Search";
 import SideNavigation from "../components/side-navigation/SideNavigation";
 
 import "../scss/pages/_videos.scss";
-import DecorativeScroll from "../components/decorative-scroll/DecorativeScroll";
+import "../scss/_common.scss";
 
 function Videos() {
 	const dispatch = useDispatch();
@@ -17,9 +17,9 @@ function Videos() {
 	};
 
 	return (
-		<div className="videos">
+		<div className="videos wrapper-page">
 			{/* <DecorativeScroll /> */}
-			<div className="videos__body">
+			<div className="videos__body page-body">
 				<div className="videos__header">
 					<Menu />
 					<Search />

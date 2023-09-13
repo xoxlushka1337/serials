@@ -22,12 +22,14 @@ const Content = ({ prevMovie, nextMovie }) => {
 			</div>
 
 			<div className="content__wrapper">
-				<button className={"content__button"} onClick={() => prevMovie()}>
-					<Arrow className="content__arrow" />
-				</button>
-				<button className="content__button" onClick={() => nextMovie()}>
-					<Arrow className="content__arrow content__arrow_turn" />
-				</button>
+				<div className="content__box-button">
+					<button className={"content__button"} onClick={() => prevMovie()}>
+						<Arrow className="content__arrow" />
+					</button>
+					<button className="content__button" onClick={() => nextMovie()}>
+						<Arrow className="content__arrow content__arrow_turn" />
+					</button>
+				</div>
 				<div className="content__number">{number}</div>
 			</div>
 		</div>

@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Content from "../components/content/Content";
 
 import "../scss/pages/_about.scss";
-import DecorativeScroll from "../components/decorative-scroll/DecorativeScroll";
+import "../scss/_common.scss";
 import InformationFilms from "../components/information-films/InformationFilms";
 
 import { setMovieIndex } from "../redux/slices/movieIndexSlice";
@@ -60,8 +60,6 @@ const About = () => {
 		}
 	};
 
-	// const [videoActive, setVideoActive] = useState(true);
-
 	return (
 		<div className="about">
 			<div
@@ -75,8 +73,7 @@ const About = () => {
 					backgroundRepeat: "no-repeat",
 					minHeight: "100vh",
 				}}>
-				{/* <DecorativeScroll /> */}
-				<div className="about__body">
+				<div className="about__body page-body">
 					<div className="about__header">
 						<Menu />
 					</div>
