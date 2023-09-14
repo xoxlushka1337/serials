@@ -1,15 +1,29 @@
 import { useSelector } from "react-redux";
 import "./_categories.scss";
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { setSelectedCategories } from "../../redux/slices/filterSlice";
 
-const Categories = ({ onCategorySelect }) => {
+const Categories = () => {
+	const dispatch = useDispatch();
+
+	const onCategorySelect = category => {
+		dispatch(setSelectedCategories([category]));
+	};
+	const [selectedCategory, setSelectedCategory] = useState(null);
+
+	const handleCategorySelect = category => {
+		setSelectedCategory(category);
+
+		onCategorySelect(category);
+	};
 	const categories = useSelector(state => state.filters.categories);
 
 	const [activeIndex, setActiveIndex] = useState(0);
 
 	const onClickCategory = (index, category) => {
 		setActiveIndex(index);
-		onCategorySelect(category);
+		handleCategorySelect(category);
 	};
 
 	return (

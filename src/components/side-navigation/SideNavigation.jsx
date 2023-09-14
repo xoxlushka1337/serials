@@ -2,14 +2,7 @@ import { useState } from "react";
 import Categories from "../categories/Categories";
 import "./sideNavigation.scss";
 
-const SideNavigation = ({ onCategorySelect }) => {
-	const [selectedCategory, setSelectedCategory] = useState(null);
-
-	const handleCategorySelect = category => {
-		setSelectedCategory(category);
-
-		onCategorySelect(category);
-	};
+const SideNavigation = () => {
 	return (
 		<div className="side-navigation">
 			<div className="side-navigation__wrapper">
@@ -34,7 +27,7 @@ const SideNavigation = ({ onCategorySelect }) => {
 					</div>
 				</div>
 				<h3 className="side-navigation__title">Genre</h3>
-				<Categories onCategorySelect={handleCategorySelect} />
+				<Categories />
 			</div>
 		</div>
 	);
