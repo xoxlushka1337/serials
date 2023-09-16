@@ -108,7 +108,7 @@ const initialState = {
 			id: 7,
 			title: "Chainsaw Man",
 			season: "1",
-			img: "Rick-Morty.png",
+			img: "chainsaw_man.png",
 			category: ["all", "fantastic", "Action Movie"],
 			description: `Aki and Power become the partners of the Chainsaw Man. Soon the hero falls in love with a mysterious girl named Reza, who turns out to be a female bomb sent after him. Besides her, Denji is being hunted by several other groups of killers.`,
 			imgTrailer: "imgTrailer-chainsaw_man.png",
