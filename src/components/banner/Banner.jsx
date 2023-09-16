@@ -21,8 +21,10 @@ const Banner = ({ title, season, img, id }) => {
 				<img className="banner__img" src={"./imgs/video/" + img} alt="404" />
 				<div className="banner__container">
 					<div className="banner__content">
-						<h3 className="banner__title">{title}</h3>
-						<p className="banner__text">Season {season}</p>
+						<div className="banner__information">
+							<h3 className="banner__title">{title}</h3>
+							<p className="banner__text">Season: {season}</p>
+						</div>
 					</div>
 				</div>
 			</Link>
