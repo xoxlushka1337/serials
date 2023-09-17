@@ -22,11 +22,11 @@
 	}
 
 	&__information {
+		display: none;
 		padding: 1.3rem 1.4rem;
 	}
 
 	&__title {
-		display: none;
 		font-size: 16px;
 		font-weight: 800;
 		line-height: normal;
@@ -35,7 +35,6 @@
 	}
 
 	&__text {
-		display: none;
 		font-size: 14px;
 		font-weight: 600;
 		line-height: normal;
@@ -49,11 +48,7 @@
 		transition: 0.6s all;
 	}
 
-	&:hover &__title {
-		display: block;
-	}
-
-	&:hover &__text {
+	&:hover &__information {
 		display: block;
 	}
 }

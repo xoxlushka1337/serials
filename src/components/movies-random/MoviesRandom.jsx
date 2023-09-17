@@ -1,24 +1,29 @@
 import { useSelector } from "react-redux";
+
+import "../../scss/_common.scss";
 import Banner from "../banner/Banner";
 
-import "./_movies.scss";
-
-function Movies() {
-	const categories = useSelector(state => state.filters.category);
-	const searchValue = useSelector(state => state.filters.searchValue);
+const MoviesRandom = () => {
 	const movie = useSelector(state => state.movies.movies);
 
-	const filteredMovies =
+	const categories = useSelector(state => state.filters.category);
+	const searchValue = useSelector(state => state.filters.searchValue);
+
+	const randomMovie = [...movie]; // Создаем копию массива
+	randomMovie.sort((a, b) => Math.random() - 0.5); // Сортируем копию массива случайным образом
+	const cropMovie = randomMovie.slice(0, movie.length / 2);
+
+	const filteredRandomMovies =
 		categories.length === 0
-			? movie
-			: movie.filter(movie =>
+			? cropMovie
+			: cropMovie.filter(movie =>
 					movie.category.some(category => categories.includes(category))
 			  );
 
 	return (
 		<div className="movies">
 			<div className="movies__content">
-				{filteredMovies
+				{filteredRandomMovies
 					.filter(obj => {
 						if (obj.title.toLowerCase().includes(searchValue.toLowerCase())) {
 							return true;
@@ -38,6 +43,6 @@ function Movies() {
 			</div>
 		</div>
 	);
-}
+};
 
-export default Movies;
+export default MoviesRandom;
