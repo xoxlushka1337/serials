@@ -22,29 +22,7 @@ const routes = [
 ];
 
 function App() {
-	return (
-		<div className="wrapper">
-			<Routes>
-				{routes.map(({ path, Component }) => (
-					<Route
-						key={path}
-						path={path}
-						element={
-							<TransitionGroup>
-								<CSSTransition
-									key={path}
-									timeout={500}
-									classNames="fade"
-									unmountOnExit>
-									<Component />
-								</CSSTransition>
-							</TransitionGroup>
-						}
-					/>
-				))}
-			</Routes>
-		</div>
-	);
+	return <div>Hello, World!</div>;
 }
 
 export default App;
