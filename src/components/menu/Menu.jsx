@@ -5,8 +5,8 @@ import "./_menu.scss";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 const Menu = () => {
-	const menu = ["ABOUT", "VIDEOS", "FEATURED", "GALLERY"];
-	const menuLink = ["", "videos", "featured", "gallery"];
+	const menu = ["ABOUT", "VIDEOS", "FEATURED"];
+	const menuLink = ["", "videos", "featured"];
 
 	const currentUrl = window.location.pathname;
 

@@ -11,7 +11,7 @@ function Videos() {
 		<div className="videos wrapper-page">
 			{/* <DecorativeScroll /> */}
 			<div className="videos__body page-body">
-				<div className="videos__header">
+				<div className="videos__header header">
 					<Menu />
 					<Search />
 				</div>
