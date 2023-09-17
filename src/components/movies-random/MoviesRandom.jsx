@@ -2,6 +2,7 @@ import { useSelector } from "react-redux";
 
 import "../../scss/_common.scss";
 import Banner from "../banner/Banner";
+import NotFound from "../not-found/NotFound";
 
 const MoviesRandom = () => {
 	const movie = useSelector(state => state.movies.movies);
@@ -22,25 +23,29 @@ const MoviesRandom = () => {
 
 	return (
 		<div className="movies">
-			<div className="movies__content">
-				{filteredRandomMovies
-					.filter(obj => {
-						if (obj.title.toLowerCase().includes(searchValue.toLowerCase())) {
-							return true;
-						}
-						return false;
-					})
-					.map(el => (
-						<div key={el.id}>
-							<Banner
-								title={el.title}
-								season={el.season}
-								img={el.img}
-								id={el.id}
-							/>
-						</div>
-					))}
-			</div>
+			{filteredRandomMovies.length === 0 ? (
+				<NotFound />
+			) : (
+				<div className="movies__content">
+					{filteredRandomMovies
+						.filter(obj => {
+							if (obj.title.toLowerCase().includes(searchValue.toLowerCase())) {
+								return true;
+							}
+							return false;
+						})
+						.map(el => (
+							<div key={el.id}>
+								<Banner
+									title={el.title}
+									season={el.season}
+									img={el.img}
+									id={el.id}
+								/>
+							</div>
+						))}
+				</div>
+			)}
 		</div>
 	);
 };

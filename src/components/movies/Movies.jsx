@@ -2,6 +2,7 @@ import { useSelector } from "react-redux";
 import Banner from "../banner/Banner";
 
 import "./_movies.scss";
+import NotFound from "../not-found/NotFound";
 
 function Movies() {
 	const categories = useSelector(state => state.filters.category);
@@ -17,25 +18,29 @@ function Movies() {
 
 	return (
 		<div className="movies">
-			<div className="movies__content">
-				{filteredMovies
-					.filter(obj => {
-						if (obj.title.toLowerCase().includes(searchValue.toLowerCase())) {
-							return true;
-						}
-						return false;
-					})
-					.map(el => (
-						<div key={el.id}>
-							<Banner
-								title={el.title}
-								season={el.season}
-								img={el.img}
-								id={el.id}
-							/>
-						</div>
-					))}
-			</div>
+			{filteredMovies.length === 0 ? (
+				<NotFound />
+			) : (
+				<div className="movies__content">
+					{filteredMovies
+						.filter(obj => {
+							if (obj.title.toLowerCase().includes(searchValue.toLowerCase())) {
+								return true;
+							}
+							return false;
+						})
+						.map(el => (
+							<div key={el.id}>
+								<Banner
+									title={el.title}
+									season={el.season}
+									img={el.img}
+									id={el.id}
+								/>
+							</div>
+						))}
+				</div>
+			)}
 		</div>
 	);
 }
