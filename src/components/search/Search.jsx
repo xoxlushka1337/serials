@@ -1,7 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import "./_search.scss";
 import { setSearchValue } from "../../redux/slices/filterSlice";
-import { useState } from "react";
 
 import { ReactComponent as IconSearch } from "../../img/icon/search.svg";
 

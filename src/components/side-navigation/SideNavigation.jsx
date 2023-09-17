@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Categories from "../categories/Categories";
 import "./sideNavigation.scss";
 

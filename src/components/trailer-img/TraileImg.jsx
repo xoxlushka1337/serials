@@ -10,7 +10,6 @@ const TrailerImg = () => {
 	const movie = useSelector(state => state.movies.movies);
 	const movieIndex = useSelector(state => state.movieIndex.movieIndex);
 
-	const videoActive = useSelector(state => state.videoActive.videoActive);
 	const dispatch = useDispatch();
 
 	return (

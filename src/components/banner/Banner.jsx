@@ -2,7 +2,7 @@ import "./_banner.scss";
 
 import { setMovieIndex } from "../../redux/slices/movieIndexSlice";
 
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 
 const Banner = ({ title, season, img, id }) => {

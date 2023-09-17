@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import Menu from "../components/menu/Menu";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import Content from "../components/content/Content";
 
 import "../scss/pages/_about.scss";

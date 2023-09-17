@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
 import "./_informationFilms.scss";
-import Video from "../video/Video";
+
 import TrailerImg from "../trailer-img/TraileImg";
 
 const InformationFilms = () => {
