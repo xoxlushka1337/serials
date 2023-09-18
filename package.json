@@ -2,6 +2,7 @@
 	"name": "serials",
 	"version": "0.1.0",
 	"private": true,
+	"homepage": "",
 	"dependencies": {
 		"@react-spring/web": "^9.7.3",
 		"@reduxjs/toolkit": "^1.9.5",
@@ -23,7 +24,7 @@
 		"build": "react-scripts build",
 		"test": "react-scripts test",
 		"predeploy": "npm run build",
-		"deploy": "gh-pages -d build",
+		"deploy": "gh-pages -d build -b gh-pages -r <xoxlushka1337/serials>",
 		"eject": "react-scripts eject"
 	},
 	"eslintConfig": {
