@@ -25,15 +25,16 @@ function App() {
 						key={path}
 						path={path}
 						element={
-							<TransitionGroup>
-								<CSSTransition
-									key={path}
-									timeout={500}
-									classNames="fade"
-									unmountOnExit>
-									<Component />
-								</CSSTransition>
-							</TransitionGroup>
+							<Component />
+							// <TransitionGroup>
+							// 	<CSSTransition
+							// 		key={path}
+							// 		timeout={500}
+							// 		classNames="fade"
+							// 		unmountOnExit>
+							// 		<Component />
+							// 	</CSSTransition>
+							// </TransitionGroup>
 						}
 					/>
 				))}
