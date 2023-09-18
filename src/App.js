@@ -21,26 +21,19 @@ function App() {
 		<div className="wrapper">
 			<Routes>
 				{routes.map(({ path, Component }) => (
-					<Route
-						key={path}
-						path={path}
-						element={
-							<Component />
-							// <TransitionGroup>
-							// 	<CSSTransition
-							// 		key={path}
-							// 		timeout={500}
-							// 		classNames="fade"
-							// 		unmountOnExit>
-							// 		<Component />
-							// 	</CSSTransition>
-							// </TransitionGroup>
-						}
-					/>
+					<Route key={path} path={path} element={<Component />} />
 				))}
 			</Routes>
 		</div>
 	);
 }
-
+// <TransitionGroup>
+// 	<CSSTransition
+// 		key={path}
+// 		timeout={500}
+// 		classNames="fade"
+// 		unmountOnExit>
+// 		<Component />
+// 	</CSSTransition>
+// </TransitionGroup>
 export default App;
