@@ -2,7 +2,6 @@
 	"name": "serials",
 	"version": "0.1.0",
 	"private": true,
-	"homepage": "https://xoxlushka1337.github.io/serials/",
 	"dependencies": {
 		"@react-spring/web": "^9.7.3",
 		"@reduxjs/toolkit": "^1.9.5",
