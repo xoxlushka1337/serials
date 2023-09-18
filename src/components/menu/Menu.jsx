@@ -4,7 +4,7 @@ import "./_menu.scss";
 
 const Menu = () => {
 	const menu = ["ABOUT", "VIDEOS", "FEATURED"];
-	const menuLink = ["/", "/videos", "/featured"];
+	const menuLink = ["/", "videos", "featured"];
 
 	const location = useLocation();
 	const currentUrl = location.pathname;

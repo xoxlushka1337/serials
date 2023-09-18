@@ -15,14 +15,10 @@ const Banner = ({ title, season, img, id }) => {
 	return (
 		<div className="banner">
 			<Link
-				to={`/`}
+				to={`//`}
 				className="banner__wrapper"
 				onClick={() => transferMovieIndex()}>
-				<img
-					className="banner__img"
-					src={"/public/imgs/video/" + img}
-					alt="404"
-				/>
+				<img className="banner__img" src={"./imgs/video/" + img} alt="404" />
 				<div className="banner__container">
 					<div className="banner__content">
 						<div className="banner__information">

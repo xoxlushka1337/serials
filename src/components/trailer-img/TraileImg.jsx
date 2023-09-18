@@ -17,7 +17,7 @@ const TrailerImg = () => {
 			onClick={() => dispatch(setVideoActive(true))}
 			className="trailer"
 			style={{
-				backgroundImage: `url(/imgs/trailer/${movie[movieIndex].imgTrailer})`,
+				backgroundImage: `url(./imgs/trailer/${movie[movieIndex].imgTrailer})`,
 				backgroundSize: "cover",
 				backgroundRepeat: "no-repeat",
 			}}>

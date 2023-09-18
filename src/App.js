@@ -12,8 +12,8 @@ import "./scss/_common.scss";
 
 const routes = [
 	{ path: "/", Component: About },
-	{ path: "/videos", Component: Videos },
-	{ path: "/featured", Component: Featured },
+	{ path: "videos", Component: Videos },
+	{ path: "featured", Component: Featured },
 ];
 
 function App() {

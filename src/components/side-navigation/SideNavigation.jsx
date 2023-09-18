@@ -10,17 +10,17 @@ const SideNavigation = () => {
 					<div className="side-navigation__network">
 						<img
 							className="side-navigation__icon"
-							src="/imgs/icon/vk.svg"
+							src="./imgs/icon/vk.svg"
 							alt="404"
 						/>
 						<img
 							className="side-navigation__icon"
-							src="/imgs/icon/ytub.svg"
+							src="./imgs/icon/ytub.svg"
 							alt="404"
 						/>
 						<img
 							className="side-navigation__icon"
-							src="/imgs/icon/twitter.svg"
+							src="./imgs/icon/twitter.svg"
 							alt="404"
 						/>
 					</div>
