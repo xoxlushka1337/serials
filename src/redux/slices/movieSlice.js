@@ -15,7 +15,7 @@ const initialState = {
 			premiere: "15 July's 2016",
 			director: "Matt Differentiation",
 			music: "Kyle Dixon & Michael Stein",
-			background: "bacg-strange_things.png",
+			background: "bacg-strange_things.jpg",
 		},
 		{
 			id: 1,
@@ -29,7 +29,7 @@ const initialState = {
 			premiere: "17 July's 2011",
 			director: "Owen Harris, Carl Tibbetts, James Hawes",
 			music: "Jon Opstad",
-			background: "bacg-black-mirror.png",
+			background: "bacg-black-mirror.jpg",
 		},
 		{
 			id: 2,
@@ -44,7 +44,7 @@ const initialState = {
 			premiere: "15 March 2019",
 			director: "Jerome Denjean",
 			music: "Hans Zimmer",
-			background: "bacg-love-death.png",
+			background: "bacg-love-death.jpg",
 		},
 		{
 			id: 3,
@@ -59,7 +59,7 @@ const initialState = {
 			premiere: "14 June's 2012",
 			director: "Joe Pitt, John Aoshima",
 			music: "Brad Brekk",
-			background: "bacg-gravity-falls.png",
+			background: "bacg-gravity-falls.jpg",
 		},
 		{
 			id: 4,
@@ -73,7 +73,7 @@ const initialState = {
 			premiere: "22 October 2021",
 			director: "Vitaly Strokous, David Fox",
 			music: "Michael Stein",
-			background: "bacg-inside-job.png",
+			background: "bacg-inside-job.jpg",
 		},
 		{
 			id: 5,
@@ -87,7 +87,7 @@ const initialState = {
 			premiere: "30 March 2022",
 			director: "Mohamed Diab",
 			music: "By Hesham Nazih",
-			background: "bacg-moon-knight.png",
+			background: "bacg-moon-knight.jpg",
 		},
 		{
 			id: 6,
@@ -102,7 +102,7 @@ const initialState = {
 			premiere: "31 October 2022",
 			director: "Tim Burton, James Marshall",
 			music: "Rob Cairns",
-			background: "bacg-rick-and-morty.png",
+			background: "bacg-rick-and-morty.jpg",
 		},
 		{
 			id: 7,
@@ -116,7 +116,7 @@ const initialState = {
 			premiere: "11 October 2022",
 			director: "Ryu Nakayama",
 			music: "Kensuke Ushio",
-			background: "bacg-chainsaw_man.png",
+			background: "bacg-chainsaw_man.jpg",
 		},
 	],
 };
