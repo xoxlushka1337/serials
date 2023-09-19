@@ -18,7 +18,11 @@ const Banner = ({ title, season, img, id }) => {
 				to={`//`}
 				className="banner__wrapper"
 				onClick={() => transferMovieIndex()}>
-				<img className="banner__img" src={"./imgs/video/" + img} alt="404" />
+				<img
+					className="banner__img"
+					src={"/serials/imgs/video/" + img}
+					alt="404"
+				/>
 				<div className="banner__container">
 					<div className="banner__content">
 						<div className="banner__information">

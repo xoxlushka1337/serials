@@ -12,8 +12,8 @@ import "./scss/_common.scss";
 
 const routes = [
 	{ path: "/", Component: About },
-	{ path: "videos", Component: Videos },
-	{ path: "featured", Component: Featured },
+	{ path: "/videos", Component: Videos },
+	{ path: "/featured", Component: Featured },
 ];
 
 function App() {
@@ -21,7 +21,7 @@ function App() {
 		<div className="wrapper">
 			<Routes>
 				{routes.map(({ path, Component }) => (
-					<Route key={path} path={path} element={<Component />} />
+					<Route key={path} path={`${path}`} element={<Component />} />
 				))}
 			</Routes>
 		</div>

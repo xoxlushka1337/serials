@@ -4,7 +4,7 @@ import "./_menu.scss";
 
 const Menu = () => {
 	const menu = ["ABOUT", "VIDEOS", "FEATURED"];
-	const menuLink = ["/", "videos", "featured"];
+	const menuLink = ["/", "/videos", "/featured"];
 
 	const location = useLocation();
 	const currentUrl = location.pathname;
@@ -22,12 +22,12 @@ const Menu = () => {
 				{menu.map((value, i) => (
 					<li
 						key={i}
-						onClick={() => onClickMenu(`/${value}`)}
+						onClick={() => onClickMenu(`${value}`)}
 						className="menu__list">
 						<Link
-							to={`/${menuLink[i]}`}
+							to={`${menuLink[i]}`}
 							className={`menu__list-link ${
-								menuActiveIndex === `/${menuLink[i]}`
+								menuActiveIndex === `${menuLink[i]}`
 									? "menu__list-link_active"
 									: ""
 							}`}>
