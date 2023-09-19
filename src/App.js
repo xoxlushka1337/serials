@@ -11,7 +11,7 @@ import Featured from "./pages/Featured";
 import "./scss/_common.scss";
 
 const routes = [
-	{ path: "/", Component: About },
+	{ path: "//", Component: About },
 	{ path: "/videos", Component: Videos },
 	{ path: "/featured", Component: Featured },
 ];

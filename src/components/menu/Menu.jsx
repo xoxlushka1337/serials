@@ -4,16 +4,20 @@ import "./_menu.scss";
 
 const Menu = () => {
 	const menu = ["ABOUT", "VIDEOS", "FEATURED"];
-	const menuLink = ["/", "/videos", "/featured"];
+	const menuLink = ["//", "/videos", "/featured"];
 
 	const location = useLocation();
-	const currentUrl = location.pathname;
+	let currentUrl = location.pathname;
 
 	const [menuActiveIndex, setMenuActiveIndex] = useState(currentUrl);
 
 	const onClickMenu = url => {
 		setMenuActiveIndex(url);
 	};
+
+	if (menuActiveIndex === "/") {
+		currentUrl = "//";
+	}
 
 	console.log(currentUrl);
 	return (
@@ -27,9 +31,7 @@ const Menu = () => {
 						<Link
 							to={`${menuLink[i]}`}
 							className={`menu__list-link ${
-								menuActiveIndex === `${menuLink[i]}`
-									? "menu__list-link_active"
-									: ""
+								currentUrl === `${menuLink[i]}` ? "menu__list-link_active" : ""
 							}`}>
 							{value}
 						</Link>
