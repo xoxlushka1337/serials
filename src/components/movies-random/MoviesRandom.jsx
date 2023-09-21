@@ -1,5 +1,6 @@
 import { useSelector } from "react-redux";
 
+import "./_movies-random.scss";
 import "../../scss/_common.scss";
 import Banner from "../banner/Banner";
 import NotFound from "../not-found/NotFound";
@@ -22,11 +23,11 @@ const MoviesRandom = () => {
 			  );
 
 	return (
-		<div className="movies">
+		<div className="movies-random">
 			{filteredRandomMovies.length === 0 ? (
 				<NotFound />
 			) : (
-				<div className="movies__content">
+				<div className="movies-random__content">
 					{filteredRandomMovies
 						.filter(obj => {
 							if (obj.title.toLowerCase().includes(searchValue.toLowerCase())) {
