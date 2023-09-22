@@ -15,7 +15,9 @@ function Videos() {
 					<Menu />
 					<Search />
 				</div>
-				<Movies />
+				<div className="page-content">
+					<Movies />
+				</div>
 			</div>
 			<SideNavigation />
 		</div>

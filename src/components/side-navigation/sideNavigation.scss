@@ -2,13 +2,17 @@
 
 .side-navigation {
 	width: 34.4rem;
+
 	color: $main-color;
-	border-left: $side-navigation-color 1px solid;
+
 	position: relative;
 
 	&__wrapper {
+		border-left: $side-navigation-color 1px solid;
 		position: fixed;
-		width: 24.4rem;
+		right: 0;
+		top: 0;
+		height: 100vh;
 	}
 
 	&__contacts {
@@ -48,5 +52,12 @@
 		padding: 2.8rem 0 2.9rem 2.8rem;
 		border-top: $side-navigation-color 1px solid;
 		border-bottom: $side-navigation-color 1px solid;
+	}
+
+	@media (max-width: 750px) {
+		width: 0px;
+		&__wrapper {
+			right: -350px;
+		}
 	}
 }

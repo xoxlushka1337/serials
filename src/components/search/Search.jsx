@@ -16,6 +16,12 @@ const Search = () => {
 				className="search__input"
 				type="text"
 			/>
+			<input
+				value={searchValue}
+				onChange={event => dispatch(setSearchValue(event.target.value))}
+				className="search__input-mobile"
+				type="text"
+			/>
 			<IconSearch className="search__icon" />
 		</div>
 	);

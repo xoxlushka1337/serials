@@ -6,6 +6,7 @@ import "../scss/pages/_featured.scss";
 
 import MoviesRandom from "../components/movies-random/MoviesRandom";
 import Search from "../components/search/Search";
+import Burger from "../components/burger/Burger";
 
 const Featured = () => {
 	return (
@@ -14,15 +15,18 @@ const Featured = () => {
 				<div className="featured__header header">
 					<Menu />
 					<Search />
+					<Burger />
 				</div>
-				<div className="featured__title">
-					<img
-						className="featured__title-img"
-						src="./imgs/icon/FEATURED.svg"
-						alt=""
-					/>
+				<div className="page-content">
+					<div className="featured__title">
+						<img
+							className="featured__title-img"
+							src="./imgs/icon/FEATURED.svg"
+							alt=""
+						/>
+					</div>
+					<MoviesRandom />
 				</div>
-				<MoviesRandom />
 			</div>
 			<SideNavigation />
 		</div>
