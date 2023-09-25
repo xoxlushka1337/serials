@@ -58,6 +58,21 @@
 		width: 0px;
 		&__wrapper {
 			right: -350px;
+			visibility: hidden;
+			background-color: rgba(0, 0, 0, 0.816);
+			transition: right 0.7s, visibility 0.5s;
+		}
+		&-none {
+			z-index: 3;
+			position: absolute;
+			width: 34.4rem;
+		}
+
+		&-none &__wrapper {
+			right: 0px;
+			overflow-y: auto;
+			visibility: visible;
+			transition: right 0.6s, visibility 0.5s;
 		}
 	}
 }

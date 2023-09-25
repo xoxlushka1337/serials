@@ -5,6 +5,7 @@ import SideNavigation from "../components/side-navigation/SideNavigation";
 
 import "../scss/pages/_videos.scss";
 import "../scss/_common.scss";
+import Burger from "../components/burger/Burger";
 
 function Videos() {
 	return (
@@ -14,6 +15,7 @@ function Videos() {
 				<div className="videos__header header">
 					<Menu />
 					<Search />
+					<Burger />
 				</div>
 				<div className="page-content">
 					<Movies />

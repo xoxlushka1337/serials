@@ -17,7 +17,7 @@
 		width: 2.9rem;
 		height: 0.3rem;
 		background-color: #cfcfcf;
-		transition: 0.4s;
+		transition: background-color 0.5s;
 
 		&::before {
 			content: "";
@@ -39,8 +39,7 @@
 
 	&-open &__middle {
 		background-color: transparent;
-
-		transition: 0.4s;
+		transition: background-color 0.5s, opacity 0.2s;
 
 		&::before {
 			top: 0;
@@ -48,7 +47,7 @@
 		}
 		&::after {
 			top: 0;
-			transform: translateY(0) rotate(-45deg);
+			transform: rotate(-45deg);
 		}
 	}
 }
