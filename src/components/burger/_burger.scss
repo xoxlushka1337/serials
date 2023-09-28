@@ -14,36 +14,36 @@
 		height: 0.3rem;
 		background-color: #cfcfcf;
 		transition: background-color 0.5s;
+	}
 
-		&::before {
-			content: "";
-			position: absolute;
-			background-color: #cfcfcf;
-			top: -1.2rem;
-			width: 2.9rem;
-			height: 0.3rem;
-		}
-		&::after {
-			content: "";
-			position: absolute;
-			background-color: #cfcfcf;
-			top: 1.2rem;
-			width: 2.9rem;
-			height: 0.3rem;
-		}
+	&__top {
+		content: "";
+		position: absolute;
+		background-color: #cfcfcf;
+		top: -1.2rem;
+		width: 2.9rem;
+		height: 0.3rem;
+	}
+	&__bot {
+		content: "";
+		position: absolute;
+		background-color: #cfcfcf;
+		top: 1.2rem;
+		width: 2.9rem;
+		height: 0.3rem;
 	}
 
 	&-open &__middle {
 		background-color: transparent;
 		transition: background-color 0.5s, opacity 0.2s, transform 0.5s;
+	}
 
-		&::before {
-			top: 0;
-			transform: rotate(45deg);
-		}
-		&::after {
-			top: 0;
-			transform: rotate(-45deg);
-		}
+	&-open &__top {
+		top: 0;
+		transform: rotate(45deg);
+	}
+	&-open &__bot {
+		top: 0;
+		transform: rotate(-45deg);
 	}
 }

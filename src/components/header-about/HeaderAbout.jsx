@@ -1,16 +1,16 @@
-import "./_header.scss";
+import "../header/_header.scss";
+import "./_header-about.scss";
 
 import Burger from "../burger/Burger";
 import Menu from "../menu/Menu";
-import Search from "../search/Search";
 
-const Header = () => {
+const HeaderAbout = () => {
 	return (
 		<div className="header">
+			{/* <div className="header__"></div> */}
 			<Menu />
-			<div className="header__container">
+			<div className="header__container header-about__container">
 				<div className="header__content">
-					<Search />
 					<h1 className="header__logo">TeanStream</h1>
 					<Burger />
 				</div>
@@ -19,4 +19,4 @@ const Header = () => {
 	);
 };
 
-export default Header;
+export default HeaderAbout;

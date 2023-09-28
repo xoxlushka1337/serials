@@ -9,6 +9,7 @@ import InformationFilms from "../components/information-films/InformationFilms";
 
 import { setMovieIndex } from "../redux/slices/movieIndexSlice";
 import Video from "../components/video/Video";
+import HeaderAbout from "../components/header-about/HeaderAbout";
 
 const About = () => {
 	const movie = useSelector(state => state.movies.movies);
@@ -74,10 +75,10 @@ const About = () => {
 					minHeight: "100vh",
 				}}>
 				<div className="about__body page-body">
-					<div className="about__header">
-						<Menu />
+					<HeaderAbout />
+					<div className="about__content page-content">
+						<Content nextMovie={nextMovie} prevMovie={prevMovie} />
 					</div>
-					<Content nextMovie={nextMovie} prevMovie={prevMovie} />
 				</div>
 				<InformationFilms />
 				<Video />

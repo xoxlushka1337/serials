@@ -15,7 +15,9 @@ const Burger = () => {
 			onClick={() => toggleOpen()}
 			className={`burger ${isOpenPanel ? "burger-open" : ""}`}>
 			<div className="burger__btn">
+				<span className="burger__top"></span>
 				<span className="burger__middle"></span>
+				<span className="burger__bot"></span>
 			</div>
 		</div>
 	);

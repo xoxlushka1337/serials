@@ -1,15 +1,34 @@
 .banner {
 	&__img {
 		width: 100%;
-		height: 27.2rem;
+		height: 23.2rem;
 		border-radius: 10px;
 		box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+		@media (max-width: 1600px) {
+			height: 27.2rem;
+		}
+		@media (max-width: 1168px) {
+			height: 21rem;
+		}
+
+		@media (max-width: 640px) {
+			height: 23rem;
+		}
+
+		@media (max-width: 585px) {
+			height: 26rem;
+		}
 
 		@media (max-width: 480px) {
 			height: 21rem;
 		}
+
+		@media (max-width: 400px) {
+			height: 19rem;
+		}
 		@media (max-width: 300px) {
-			height: 33rem;
+			height: 35rem;
 		}
 	}
 
@@ -41,21 +60,40 @@
 		margin-bottom: 4px;
 	}
 
-	&__text {
-		font-size: 14px;
-		font-weight: 600;
-		line-height: normal;
+	@media (hover: none) {
+		&__content {
+			top: -11px;
+			bottom: 0px;
+		}
+		&__information {
+			display: block;
+			padding: 1.3rem 1.4rem;
+		}
+
+		&__title {
+			font-size: 1.4rem;
+
+			font-weight: 600;
+			line-height: normal;
+			letter-spacing: -0.07px;
+		}
+
+		&__text {
+			display: none;
+		}
 	}
 
-	&:hover &__content {
-		height: 90px;
-		background: rgba(130, 130, 130, 0.5);
-		box-shadow: 0px 0.4rem 0.4rem 0px rgba(0, 0, 0, 0.25);
+	@media (hover: hover) {
+		&:hover &__content {
+			height: 90px;
+			background: rgba(130, 130, 130, 0.5);
+			box-shadow: 0px 0.4rem 0.4rem 0px rgba(0, 0, 0, 0.25);
 
-		transition: 0.6s all;
-	}
+			transition: 0.6s all;
+		}
 
-	&:hover &__information {
-		display: block;
+		&:hover &__information {
+			display: block;
+		}
 	}
 }

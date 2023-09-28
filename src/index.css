@@ -25,7 +25,7 @@ html {
 		font-size: calc(100vw / 768 * 10);
 	}
 
-	@media (max-width: 637px) {
+	@media (max-width: 600px) {
 		font-size: calc(100vw / 600 * 10);
 	}
 

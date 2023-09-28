@@ -1,11 +1,10 @@
 @import "../../scss/_variables.scss";
 
 .side-navigation {
+	position: relative;
 	width: 34.4rem;
 
 	color: $main-color;
-
-	position: relative;
 
 	&__wrapper {
 		border-left: $side-navigation-color 1px solid;
@@ -62,13 +61,13 @@
 			background-color: rgba(0, 0, 0, 0.816);
 			transition: right 0.7s, visibility 0.5s;
 		}
-		&-none {
+		&-open {
 			z-index: 3;
 			position: absolute;
 			width: 34.4rem;
 		}
 
-		&-none &__wrapper {
+		&-open &__wrapper {
 			right: 0px;
 			overflow-y: auto;
 			visibility: visible;

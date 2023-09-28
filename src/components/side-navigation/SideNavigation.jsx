@@ -1,16 +1,15 @@
 import Categories from "../categories/Categories";
 import "./sideNavigation.scss";
-import { useDispatch, useSelector } from "react-redux";
-import { setIsOpenPanel } from "../../redux/slices/openPanelSlice";
+
+import { useSelector } from "react-redux";
 
 const SideNavigation = () => {
 	const isOpenPanel = useSelector(state => state.isOpenPanel.isOpenPanel);
-	const dispatch = useDispatch();
 
 	return (
 		<div
-			className={`side-navigation ${
-				isOpenPanel ? "side-navigation-none" : ""
+			className={`side-navigation  ${
+				isOpenPanel ? "side-navigation-open" : ""
 			}`}>
 			<div className="side-navigation__wrapper">
 				<div className="side-navigation__contacts">

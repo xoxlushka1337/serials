@@ -1,0 +1,7 @@
+.header-about__container {
+	width: auto;
+
+	@media (max-width: 600px) {
+		width: 100%;
+	}
+}
