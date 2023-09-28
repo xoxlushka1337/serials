@@ -4,9 +4,15 @@
 	display: flex;
 	column-gap: 5.3rem;
 	font-weight: 600;
-
+	font-size: 2rem;
 	position: relative;
 	z-index: 2;
+
+	@media (max-width: 600px) {
+		column-gap: 2.6rem;
+		font-size: 1.5rem;
+		padding: 0 2.8rem 0;
+	}
 
 	&__list {
 		&-link {

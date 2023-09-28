@@ -1,14 +1,17 @@
 @import "../../scss/_variables.scss";
 
 .side-navigation {
-	width: 34.4rem;
-	color: $main-color;
-	border-left: $side-navigation-color 1px solid;
 	position: relative;
+	width: 34.4rem;
+
+	color: $main-color;
 
 	&__wrapper {
+		border-left: $side-navigation-color 1px solid;
 		position: fixed;
-		width: 24.4rem;
+		right: 0;
+		top: 0;
+		height: 100vh;
 	}
 
 	&__contacts {
@@ -48,5 +51,27 @@
 		padding: 2.8rem 0 2.9rem 2.8rem;
 		border-top: $side-navigation-color 1px solid;
 		border-bottom: $side-navigation-color 1px solid;
+	}
+
+	@media (max-width: 900px) {
+		width: 0px;
+		&__wrapper {
+			right: -350px;
+			visibility: hidden;
+			background-color: rgba(0, 0, 0, 0.816);
+			transition: right 0.7s, visibility 0.5s;
+		}
+		&-open {
+			z-index: 3;
+			position: absolute;
+			width: 34.4rem;
+		}
+
+		&-open &__wrapper {
+			right: 0px;
+			overflow-y: auto;
+			visibility: visible;
+			transition: right 0.6s, visibility 0.5s;
+		}
 	}
 }

@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;600;700;800;900&display=swap");
 
+@import "../scss//variables.scss";
+
 * {
 	margin: 0;
 	font-family: "Montserrat", sans-serif;
@@ -7,6 +9,9 @@
 }
 
 .wrapper {
+	// overflow: hidden;
+	width: 100%;
+	position: relative;
 	height: 100%;
 }
 
@@ -22,15 +27,19 @@
 	min-height: 100vh;
 }
 
-.header {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding-top: 8.2rem;
+.page-content {
+	margin: 0 8.6rem 9.5rem;
+
+	@media (max-width: 800px) {
+		margin: 0 3.8rem 9.5rem;
+	}
+
+	@media (max-width: 480px) {
+		margin: 0 2.8rem 9.5rem;
+	}
 }
 
 .page-body {
-	margin: 0 8.6rem 0 9.5rem;
 	width: 100%;
 }
 

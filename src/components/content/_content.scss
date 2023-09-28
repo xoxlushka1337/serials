@@ -19,7 +19,7 @@
 
 	&__description {
 		color: $text;
-		font-size: 24px;
+		font-size: 2.4rem;
 		font-style: normal;
 		font-weight: 600;
 		line-height: 169.4%;
@@ -28,7 +28,7 @@
 
 	&__number {
 		color: #9f9f9f;
-		font-size: 24px;
+		font-size: 2.4rem;
 		font-weight: 900;
 		letter-spacing: 2.16px;
 	}
@@ -58,6 +58,33 @@
 
 		&_turn {
 			transform: rotate(180deg);
+		}
+	}
+
+	@media (max-width: 1000px) {
+		&__title {
+			font-size: 4.4rem;
+		}
+
+		&__description {
+			font-size: 1.5rem;
+			letter-spacing: -0.48px;
+
+			margin: 3rem 0 3rem;
+		}
+	}
+
+	@media (max-width: 480px) {
+		&__title {
+			font-size: 2.5rem;
+		}
+
+		&__description {
+			margin: 2.6rem 0 3rem;
+		}
+
+		&__main {
+			min-height: calc(70vh - 52px);
 		}
 	}
 }
