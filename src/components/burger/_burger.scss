@@ -3,7 +3,8 @@
 	width: 2.9rem;
 	position: relative;
 	z-index: 30;
-	@media (max-width: 750px) {
+
+	@media (max-width: 900px) {
 		display: block;
 	}
 	cursor: pointer;
