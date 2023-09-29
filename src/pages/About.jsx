@@ -1,5 +1,4 @@
 import { useDispatch, useSelector } from "react-redux";
-import Menu from "../components/menu/Menu";
 import { useEffect, useState } from "react";
 import Content from "../components/content/Content";
 
@@ -82,7 +81,6 @@ const About = () => {
 				<InformationFilms />
 				<Video />
 			</div>
-			<div className="about__blur"></div>
 		</div>
 	);
 };

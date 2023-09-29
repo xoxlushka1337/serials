@@ -18,7 +18,6 @@ const TrailerImg = () => {
 			className="trailer"
 			style={{
 				backgroundImage: `url(./imgs/trailer/${movie[movieIndex].imgTrailer})`,
-				backgroundSize: "cover",
 				backgroundRepeat: "no-repeat",
 			}}>
 			<div className="trailer__wrapper">
