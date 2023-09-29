@@ -14,9 +14,11 @@
 
 		cursor: pointer;
 
-		&:hover {
-			color: #b7b7b7;
-			text-decoration-line: underline;
+		@media (hover: hover) {
+			&:hover {
+				color: #b7b7b7;
+				text-decoration-line: underline;
+			}
 		}
 	}
 }

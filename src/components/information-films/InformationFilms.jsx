@@ -12,10 +12,10 @@ const InformationFilms = () => {
 
 	return (
 		<div
-			className={`information-films panel ${
+			className={`information-films ${
 				isOpenPanel ? "information-films-open" : ""
 			}`}>
-			<div className="information-films__wrapper panel-wrapper">
+			<div className="information-films__wrapper">
 				<div className="information-films__contacts">
 					<h3 className="information-films__title">FOLLOW US</h3>
 					<div className="information-films__network">

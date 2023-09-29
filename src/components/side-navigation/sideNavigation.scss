@@ -65,6 +65,7 @@
 			z-index: 3;
 			position: absolute;
 			width: 34.4rem;
+			pointer-events: all;
 		}
 
 		&-open &__wrapper {

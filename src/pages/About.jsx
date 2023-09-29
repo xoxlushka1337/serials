@@ -13,7 +13,7 @@ import HeaderAbout from "../components/header-about/HeaderAbout";
 
 const About = () => {
 	const movie = useSelector(state => state.movies.movies);
-
+	const isOpenPanel = useSelector(state => state.isOpenPanel.isOpenPanel);
 	const movieIndex = useSelector(state => state.movieIndex.movieIndex);
 	const dispatch = useDispatch();
 
@@ -62,7 +62,7 @@ const About = () => {
 	};
 
 	return (
-		<div className="about">
+		<div className={`about ${isOpenPanel ? "about-open" : ""}`}>
 			<div
 				className={`about__img`}
 				style={{
@@ -70,7 +70,6 @@ const About = () => {
 						? `url(./imgs/background/${movie[movieIndex].background})`
 						: "",
 
-					backgroundSize: "cover",
 					backgroundRepeat: "no-repeat",
 					minHeight: "100vh",
 				}}>
@@ -83,6 +82,7 @@ const About = () => {
 				<InformationFilms />
 				<Video />
 			</div>
+			<div className="about__blur"></div>
 		</div>
 	);
 };
