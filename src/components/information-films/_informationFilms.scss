@@ -2,11 +2,12 @@
 
 .information-films {
 	position: relative;
-	width: 79.2rem;
+	width: 73rem;
 	color: $main-color;
 	z-index: 2;
 
 	&__wrapper {
+		width: 48rem;
 		border-left: $side-navigation-color 1px solid;
 		position: fixed;
 		right: 0;

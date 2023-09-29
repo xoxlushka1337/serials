@@ -6,6 +6,9 @@
 	transition: background-image 0.5s ease-in-out;
 
 	&__main {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 		min-height: calc(70vh - 80px);
 	}
 
@@ -84,7 +87,7 @@
 		}
 
 		&__main {
-			min-height: calc(70vh - 92px);
+			min-height: calc(70vh - 239px);
 		}
 	}
 }

@@ -70,7 +70,6 @@ const About = () => {
 						? `url(./imgs/background/${movie[movieIndex].background})`
 						: "",
 
-					backgroundSize: "cover",
 					backgroundRepeat: "no-repeat",
 					minHeight: "100vh",
 				}}>
@@ -83,6 +82,7 @@ const About = () => {
 				<InformationFilms />
 				<Video />
 			</div>
+			<div className="about__blur"></div>
 		</div>
 	);
 };
