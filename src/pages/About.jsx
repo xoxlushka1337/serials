@@ -62,16 +62,17 @@ const About = () => {
 
 	return (
 		<div className={`about ${isOpenPanel ? "about-open" : ""}`}>
-			<div
-				className={`about__img`}
-				style={{
-					backgroundImage: loadedImages[movieIndex]
-						? `url(./imgs/background/${movie[movieIndex].background})`
-						: "",
+			<div className={`about__wrapper`}>
+				<div
+					className="about__img"
+					style={{
+						backgroundImage: loadedImages[movieIndex]
+							? `url(./imgs/background/${movie[movieIndex].background})`
+							: "",
 
-					backgroundRepeat: "no-repeat",
-					minHeight: "100vh",
-				}}>
+						backgroundRepeat: "no-repeat",
+						minHeight: "100vh",
+					}}></div>
 				<div className="about__body page-body">
 					<HeaderAbout />
 					<div className="about__content page-content">
