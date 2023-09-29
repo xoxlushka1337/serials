@@ -62,12 +62,13 @@
 
 	@media (hover: none) {
 		&__content {
-			top: -11px;
+			top: 3px;
 			bottom: 0px;
 		}
+
 		&__information {
 			display: block;
-			padding: 1.3rem 1.4rem;
+			padding: 0;
 		}
 
 		&__title {
