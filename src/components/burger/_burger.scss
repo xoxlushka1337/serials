@@ -3,11 +3,11 @@
 	width: 2.9rem;
 	position: relative;
 	z-index: 30;
+	cursor: pointer;
 
 	@media (max-width: 900px) {
 		display: block;
 	}
-	cursor: pointer;
 
 	&__middle {
 		position: absolute;
@@ -25,6 +25,7 @@
 		width: 2.9rem;
 		height: 0.3rem;
 	}
+
 	&__bot {
 		content: "";
 		position: absolute;
@@ -32,6 +33,10 @@
 		top: 1.2rem;
 		width: 2.9rem;
 		height: 0.3rem;
+	}
+
+	&-open &__btn {
+		position: fixed;
 	}
 
 	&-open &__middle {

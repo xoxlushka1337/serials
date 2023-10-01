@@ -1,5 +1,4 @@
 import { useDispatch, useSelector } from "react-redux";
-import Menu from "../components/menu/Menu";
 import { useEffect, useState } from "react";
 import Content from "../components/content/Content";
 
@@ -63,16 +62,17 @@ const About = () => {
 
 	return (
 		<div className={`about ${isOpenPanel ? "about-open" : ""}`}>
-			<div
-				className={`about__img`}
-				style={{
-					backgroundImage: loadedImages[movieIndex]
-						? `url(./imgs/background/${movie[movieIndex].background})`
-						: "",
+			<div className={`about__wrapper`}>
+				<div
+					className="about__img"
+					style={{
+						backgroundImage: loadedImages[movieIndex]
+							? `url(./imgs/background/${movie[movieIndex].background})`
+							: "",
 
-					backgroundRepeat: "no-repeat",
-					minHeight: "100vh",
-				}}>
+						backgroundRepeat: "no-repeat",
+						minHeight: "100vh",
+					}}></div>
 				<div className="about__body page-body">
 					<HeaderAbout />
 					<div className="about__content page-content">
@@ -82,7 +82,6 @@ const About = () => {
 				<InformationFilms />
 				<Video />
 			</div>
-			<div className="about__blur"></div>
 		</div>
 	);
 };

@@ -7,7 +7,6 @@
 	z-index: 2;
 
 	&__wrapper {
-		width: 48rem;
 		border-left: $side-navigation-color 1px solid;
 		position: fixed;
 		right: 0;
@@ -91,7 +90,7 @@
 		&-open {
 			z-index: 3;
 			position: absolute;
-			width: 79.2rem;
+			width: 73rem;
 		}
 
 		&-open &__wrapper {
