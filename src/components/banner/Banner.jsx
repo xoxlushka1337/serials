@@ -2,7 +2,7 @@ import "./_banner.scss";
 
 import { setMovieIndex } from "../../redux/slices/movieIndexSlice";
 
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useDispatch } from "react-redux";
 
 const Banner = ({ title, season, img, id }) => {
@@ -12,6 +12,17 @@ const Banner = ({ title, season, img, id }) => {
 		dispatch(setMovieIndex(id));
 	}
 
+	const location = useLocation();
+	let currentUrl = location.pathname;
+
+	let picturesFolder = "video";
+
+	if (currentUrl === "/featured") {
+		picturesFolder = "featured";
+	} else {
+		picturesFolder = "video";
+	}
+
 	return (
 		<div className="banner">
 			<Link
@@ -19,8 +30,8 @@ const Banner = ({ title, season, img, id }) => {
 				className="banner__wrapper"
 				onClick={() => transferMovieIndex()}>
 				<img
-					className="banner__img"
-					src={"/serials/imgs/video/" + img}
+					className={`banner__img ${id === 6 ? "banner__img-cover" : ""}`}
+					src={`/serials/imgs/${picturesFolder}/` + img}
 					alt="404"
 				/>
 				<div className="banner__container">

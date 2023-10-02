@@ -1,5 +1,5 @@
 .movies-random {
-	margin-top: 4.5rem;
+	margin: 4.5rem 0;
 
 	&__content {
 		display: grid;
@@ -19,6 +19,21 @@
 	}
 
 	@media (max-width: 500px) {
-		margin-top: 2.2rem;
+		margin: 2.2rem 0;
+	}
+}
+
+.full-width-banner {
+	grid-column: span 4;
+
+	@media (max-width: 1600px) {
+		grid-column: span 3;
+	}
+
+	@media (max-width: 600px) {
+		grid-column: span 2;
+	}
+	@media (max-width: 300px) {
+		grid-column: span 1;
 	}
 }

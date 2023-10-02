@@ -11,14 +11,18 @@ const MoviesRandom = () => {
 	const categories = useSelector(state => state.filters.category);
 	const searchValue = useSelector(state => state.filters.searchValue);
 
-	const randomMovie = [...movie]; // Создаем копию массива
-	randomMovie.sort((a, b) => Math.random() - 0.5); // Сортируем копию массива случайным образом
-	const cropMovie = randomMovie.slice(0, movie.length / 2);
+	const moviesFeatured = [];
+
+	for (let i = 0; i < movie.length; i++) {
+		if (movie[i].category.includes("new products")) {
+			moviesFeatured.push(movie[i]);
+		}
+	}
 
 	const filteredRandomMovies =
 		categories.length === 0
-			? cropMovie
-			: cropMovie.filter(movie =>
+			? moviesFeatured
+			: moviesFeatured.filter(movie =>
 					movie.category.some(category => categories.includes(category))
 			  );
 
@@ -36,11 +40,13 @@ const MoviesRandom = () => {
 							return false;
 						})
 						.map(el => (
-							<div key={el.id}>
+							<div
+								key={el.id}
+								className={el.id === 6 ? "full-width-banner" : "grid-banner"}>
 								<Banner
 									title={el.title}
 									season={el.season}
-									img={el.img}
+									img={el.featuredImg}
 									id={el.id}
 								/>
 							</div>
