@@ -7,6 +7,7 @@
 	z-index: 2;
 
 	&__wrapper {
+		width: 47rem;
 		border-left: $side-navigation-color 1px solid;
 		position: fixed;
 		right: 0;
@@ -81,6 +82,7 @@
 		width: 0px;
 
 		&__wrapper {
+			// width: 100%;
 			right: -350px;
 			visibility: hidden;
 			background-color: rgba(0, 0, 0, 0.816);
@@ -98,6 +100,12 @@
 			overflow-y: auto;
 			visibility: visible;
 			transition: right 0.6s, visibility 0.5s;
+		}
+	}
+
+	@media (max-width: 480px) {
+		&__wrapper {
+			width: 100%;
 		}
 	}
 }
