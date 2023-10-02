@@ -3,5 +3,17 @@
 		display: flex;
 		justify-content: center;
 		padding-top: 4.5rem;
+
+		&-img {
+			width: 34rem;
+
+			@media (max-width: 1600px) {
+				width: 24rem;
+			}
+
+			@media (max-width: 300px) {
+				width: 20rem;
+			}
+		}
 	}
 }
