@@ -1,4 +1,5 @@
-import "./_banner.scss";
+import "../banner/_banner.scss";
+import "./_bannerFeatured.scss";
 
 import { setMovieIndex } from "../../redux/slices/movieIndexSlice";
 
@@ -19,8 +20,10 @@ const Banner = ({ title, season, img, id }) => {
 				className="banner__wrapper"
 				onClick={() => transferMovieIndex()}>
 				<img
-					className={`banner__img ${id === 6 ? "banner__img-cover" : ""}`}
-					src={`/serials/imgs/video/` + img}
+					className={`banner-featured__img ${
+						id === 6 ? "banner__img-cover" : ""
+					}`}
+					src={`/serials/imgs/featured/` + img}
 					alt="404"
 				/>
 				<div className="banner__container">

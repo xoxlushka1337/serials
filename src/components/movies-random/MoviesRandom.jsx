@@ -2,7 +2,7 @@ import { useSelector } from "react-redux";
 
 import "./_movies-random.scss";
 import "../../scss/_common.scss";
-import Banner from "../banner/Banner";
+import BannerFeatured from "../banner-featured/BannerFeatured";
 import NotFound from "../not-found/NotFound";
 
 const MoviesRandom = () => {
@@ -43,7 +43,7 @@ const MoviesRandom = () => {
 							<div
 								key={el.id}
 								className={el.id === 6 ? "full-width-banner" : "grid-banner"}>
-								<Banner
+								<BannerFeatured
 									title={el.title}
 									season={el.season}
 									img={el.featuredImg}
